@@ -35,9 +35,9 @@ import { HotelModule } from './hotel/hotel.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
     CarouselModule,
-    HotelModule
+    HotelModule,
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })

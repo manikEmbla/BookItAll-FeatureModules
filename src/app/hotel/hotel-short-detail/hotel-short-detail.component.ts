@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hotel } from '../../models/hotel';
 import {HotelService  } from '../../services/hotel.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'hotel-short-detail',
@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class HotelShortDetailComponent implements OnInit {
 
-  constructor(private hotelService: HotelService, private router: Router) { }
+  constructor(private hotelService: HotelService, private router: Router, private route: ActivatedRoute) {
+   }
 
   @Input() hotel: Hotel;
 
@@ -19,7 +20,7 @@ export class HotelShortDetailComponent implements OnInit {
 
   viewHotel(){
     this.hotelService.selectedHotel = this.hotel;
-    this.router.navigate(['/hotel-details']);
+    this.router.navigate(['../details'], {relativeTo:this.route});
   }
 
 }

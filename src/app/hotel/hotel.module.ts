@@ -13,6 +13,7 @@ import {HotelService  } from '../services/hotel.service';
 import { HotelShortDetailComponent } from './hotel-short-detail/hotel-short-detail.component';
 import { SlideShowComponent } from '../shared/slide-show/slide-show.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
+import { HotelComponent } from './hotel.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
     HotelListComponent,
     HotelShortDetailComponent,
     SlideShowComponent,
+    HotelComponent,
     HotelDetailsComponent,
   ],
   imports: [
